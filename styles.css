@@ -1,0 +1,109 @@
+/* ==================================================== */
+/* 1. Reset i Estils de Base */
+/* ==================================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Fons clar del document */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #0000ff; /* Blau fosc per a títols */
+    margin-top: 0;
+}
+
+a {
+    color: #008800;
+    text-decoration: none;
+}
+
+/* El contenidor global de layout */
+.flex-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff; /* Fons blanc dins del contenidor */
+    min-height: 90vh;
+    border: 2px solid #555; /* Marc general */
+}
+
+/* ==================================================== */
+/* 2. COLORS I VISUALITZACIÓ SEMÀNTICA CLAU */
+/* ==================================================== */
+
+/* HEADER: Capçalera (Color 1 - Vermell) */
+header {
+    background-color: #ffcccc; /* Vermell clar */
+    border-bottom: 3px solid #ff0000;
+    padding: 20px;
+    text-align: center;
+}
+header h1 { color: #ff0000; }
+
+/* NAV: Navegació (Color 2 - Verd) */
+nav {
+    background-color: #ccffcc; /* Verd clar */
+    border-bottom: 2px solid #00ff00;
+}
+.nav-class ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.nav-class li a {
+    display: block;
+    padding: 10px;
+    color: #000;
+}
+
+/* MAIN: Contingut Principal (Color 3 - Groc) */
+main {
+    background-color: #ffffcc; /* Groc clar */
+    padding: 20px;
+    /* La vora farà que es vegi quan està al costat de l'aside */
+    border-right: 2px solid #ffcc00; 
+}
+
+/* ASIDE: Barra Lateral (Color 4 - Blau) */
+aside {
+    background-color: #cceeff; /* Blau cel clar */
+    padding: 15px;
+    border-left: 2px solid #0099ff;
+    margin: 0; /* Important per al layout */
+}
+aside h2 { color: #0099ff; }
+
+/* FOOTER: Peu de Pàgina (Color 5 - Morat) */
+footer {
+    background-color: #e0ccff; /* Morat clar */
+    padding: 15px;
+    text-align: center;
+    border-top: 3px solid #8800ff;
+}
+footer p { color: #8800ff; }
+
+/* ==================================================== */
+/* 3. Layout d'Escriptori (Responsive) */
+/* ==================================================== */
+@media (min-width: 768px) {
+    /* Navegació en fila */
+    .nav-class ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    /* Disposició Grid per a MAIN i ASIDE */
+    .flex-container {
+        display: grid;
+        grid-template-areas: 
+            "main aside";
+        grid-template-columns: 3fr 1fr; /* Una columna més gran per a main */
+        gap: 0; /* Sense espai entre main i aside per a un millor contrast visual */
+        padding: 0; 
+    }
+}
