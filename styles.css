@@ -1,6 +1,4 @@
-/* ==================================================== */
-/* 1. Reset i Estils de Base */
-/* ==================================================== */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -28,10 +26,6 @@ a {
     min-height: 90vh;
     border: 2px solid #555; /* Marc general */
 }
-
-/* ==================================================== */
-/* 2. COLORS I VISUALITZACIÓ SEMÀNTICA CLAU */
-/* ==================================================== */
 
 /* HEADER: Capçalera (Color 1 - Vermell) */
 header {
@@ -87,9 +81,6 @@ footer {
 }
 footer p { color: #8800ff; }
 
-/* ==================================================== */
-/* 3. Layout d'Escriptori (Responsive) */
-/* ==================================================== */
 @media (min-width: 768px) {
     /* Navegació en fila */
     .nav-class ul {
